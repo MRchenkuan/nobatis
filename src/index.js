@@ -151,6 +151,4 @@ function replaceColumnAlias(dates, resultMap) {
  * path sql 文件路径
  * config 数据库配置
  */
-module.exports = function(path, dbConfig){
-    return new DAO(path, dbConfig);
-};
+module.exports = DAO;
