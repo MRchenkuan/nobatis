@@ -1,0 +1,18 @@
+{
+  "name": "nobatis",
+  "version": "1.0.0",
+  "description": "mybatis for node",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test/index.js"
+  },
+  "keywords": [
+    "node",
+    "mybatis"
+  ],
+  "author": "chenkuan",
+  "license": "ISC",
+  "dependencies": {
+    "orm": "^3.2.3"
+  }
+}
