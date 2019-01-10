@@ -1,5 +1,5 @@
 {
-  "name": "nobatis",
+  "name": "@xsyx/nobatis",
   "version": "1.0.0",
   "description": "mybatis for node",
   "main": "index.js",
@@ -14,5 +14,17 @@
   "license": "ISC",
   "dependencies": {
     "orm": "^3.2.3"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MRchenkuan/nobatis.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MRchenkuan/nobatis/issues"
+  },
+  "homepage": "https://github.com/MRchenkuan/nobatis#readme"
 }
