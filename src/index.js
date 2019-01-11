@@ -18,7 +18,9 @@ function connectToDB(dbConfig) {
         if (connections) {
             res(connections);
         } else {
-            orm.connect("mysql://" + dbConfig.username + ":" + dbConfig.password + "@" + dbConfig.host + ":" + dbConfig.port + "/" + dbConfig.db, function (err, db) {
+          let connStr = "mysql://" + dbConfig.username + ":" + dbConfig.password + "@" + dbConfig.host + ":" + dbConfig.port + "/";
+          if(dbConfig.db) connStr += dbConfig.db;
+            orm.connect(connStr, function (err, db) {
                 if (err) {
                     console.log(err)
                     rej(err)
