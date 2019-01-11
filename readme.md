@@ -1,4 +1,6 @@
-const DAO = require('../dist/index');
+```javascript
+
+const DAO = require('@xsyx/nobatis');
 const path = require('path');
 
 const modelPath = path.resolve(__dirname,'./model');
@@ -13,3 +15,5 @@ const dbConfig = {
 const dao1 = new DAO(modelPath, dbConfig);
 dao1.test = function(){};
 console.log(dao1.test())
+
+```

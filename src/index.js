@@ -18,7 +18,7 @@ function connectToDB(dbConfig) {
         if (connections) {
             res(connections);
         } else {
-            orm.connect("mysql://" + dbConfig.username + ":" + dbConfig.password + "@" + dbConfig.host + ":" + dbConfig.port + "/", function (err, db) {
+            orm.connect("mysql://" + dbConfig.username + ":" + dbConfig.password + "@" + dbConfig.host + ":" + dbConfig.port + "/" + dbConfig.db, function (err, db) {
                 if (err) {
                     console.log(err)
                     rej(err)
@@ -37,7 +37,7 @@ function connectToDB(dbConfig) {
  * @constructor
  */
 var DAO = function (modelPath, dbConfig) {
-    
+
     return new Proxy({}, {
         get: function (target, funcName, receiver) {
             const _receiver = Reflect.get(target, funcName, receiver);
