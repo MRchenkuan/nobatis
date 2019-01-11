@@ -1,4 +1,4 @@
-const DAO = require('../src/index');
+const DAO = require('../dist/index');
 const path = require('path');
 
 const modelPath = path.resolve(__dirname,'./model');
