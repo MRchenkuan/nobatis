@@ -14,6 +14,7 @@
   "author": "chenkuan",
   "license": "ISC",
   "dependencies": {
+    "mysql": "^2.16.0",
     "orm": "^3.2.4"
   },
   "directories": {
