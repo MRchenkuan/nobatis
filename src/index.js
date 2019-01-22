@@ -101,7 +101,7 @@ function replaceSpecials(v) {
     // v = v.toString().replace('\'', '\\');// 防止注入
     // v = v.toString().replace('\"', '\\"');// 防止注入
     // v = v.toString().replace('\\', '\\');// 防止注入
-    return v
+    return v.replace(/\'/g, "\\'").replace(/\"/g, '\\"') // 替换特殊字符
 }
 
 /**

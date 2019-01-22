@@ -1,6 +1,6 @@
 {
   "name": "@xsyx/nobatis",
-  "version": "1.0.8",
+  "version": "1.1.0",
   "description": "mybatis for node",
   "main": "dist/index.js",
   "scripts": {
