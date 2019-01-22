@@ -98,9 +98,9 @@ function getSQL(modelPath, SQL_FILE_NAME) {
 }
 
 function replaceSpecials(v) {
-    v = v.toString().replace('\'', '');// 防止注入
-    v = v.toString().replace('\"', '');// 防止注入
-    v = v.toString().replace('\\', '');// 防止注入
+    v = v.toString().replace('\'', '\\');// 防止注入
+    v = v.toString().replace('\"', '\\"');// 防止注入
+    // v = v.toString().replace('\\', '\\');// 防止注入
     return v
 }
 
