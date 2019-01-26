@@ -72,7 +72,7 @@ var DAO = function (modelPath, dbConfig) {
                             if (resultMap) {
                                 replaceColumnAlias(dates, resultMap)
                             }
-                            res({ data: dates, sql})
+                            res(dates)
                         });
                     });
                 })
