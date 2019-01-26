@@ -72,7 +72,7 @@ var DAO = function (modelPath, dbConfig) {
                             if (resultMap) {
                                 replaceColumnAlias(dates, resultMap)
                             }
-                            res(dates)
+                            res({ data: dates, sql})
                         });
                     });
                 })
@@ -98,12 +98,9 @@ function getSQL(modelPath, SQL_FILE_NAME) {
 }
 
 function replaceSpecials(v) {
-    // v = v.toString().replace('\'', '\\');// 防止注入
-    // v = v.toString().replace('\"', '\\"');// 防止注入
-    // v = v.toString().replace('\\', '\\');// 防止注入
+    if (typeof v.replace !== 'function') return v;
     return v.replace(/\'/g, "\\'").replace(/\"/g, '\\"') // 替换特殊字符
 }
-
 /**
  * 获取函数的参数
  * @param func
