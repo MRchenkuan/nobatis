@@ -1,3 +1,6 @@
+# mybatis 风格的 mysql 查询工具
+
+#### 使用方式
 ```javascript
 
 const DAO = require('@xsyx/nobatis');
